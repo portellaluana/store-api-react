@@ -1,29 +1,23 @@
-import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
-
 export const NotFound = () => {
-  const { productNotFound, searchItem } = useContext(AppContext);
+
+  const valorInput = sessionStorage.getItem("item-procurado");
 
   const refreshPage = () => {
-    window.location.reload(false);
+    window.location.href = '/homepage';
   };
 
   return (
     <div className="not-found-title-container">
-      {productNotFound ? (
         <div className="not-found-title-content">
           <h4 className="not-found-title not-found-title-ops">Ops!</h4>
           <h4 className="not-found-title ">
-            <span className="search-item-not-found">" {searchItem} " </span>
+            <span className="search-item-not-found">" {valorInput} " </span>
             não foi encontrado.
           </h4>
           <button className="not-found-btn" onClick={refreshPage}>
-            Voltar
+            Voltar pra home
           </button>
         </div>
-      ) : (
-        ""
-      )}
     </div>
   );
 };

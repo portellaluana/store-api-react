@@ -20,7 +20,7 @@ interface CardProps {
   };
 }
 export const Card: React.FC<CardProps> = ({ data }) => {
-  const { id, title, image, price, description, quantidade } = data.product;
+  const { id, title, image, price, description } = data.product;
   const { cartItems, setCartItems, productSelected, setProductSelected } = useContext(AppContext);
 
   const handleAddToCart = () => {

@@ -5,6 +5,7 @@ import { Checkout } from "./pages/checkout/Checkout";
 import { Provider } from "./context/Provider";
 import Details from "./pages/product-details/Details";
 import {APIError} from "./pages/APIError/APIError";
+import { PageProductNotFound } from "./pages/productNotFound/productNotFound";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/produto-não-encontrado" element={<PageProductNotFound />} />
         </Routes>
       </Router>
     </Provider>

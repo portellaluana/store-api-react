@@ -469,7 +469,7 @@ button:disabled {
   justify-content: center;
   align-items: center;
   max-width: 1080px;
-  padding-top: 200px;
+  padding: 200px 0 100px 0;
 }
 
 .not-found-image-content {

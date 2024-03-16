@@ -11,7 +11,6 @@ export const Homepage = () => {
     <>
       <Navbar />
       <Slider/>
-      <NotFound />
       <Products />
       <Minicart />
     </>

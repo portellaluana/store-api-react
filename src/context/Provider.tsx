@@ -15,7 +15,7 @@ interface ProviderValue {
   productNotFound: boolean;
   setProductNotFound: React.Dispatch<React.SetStateAction<boolean>>;
   searchItem: string;
-  setSarchItem: React.Dispatch<React.SetStateAction<string>>;
+  setSearchItem: React.Dispatch<React.SetStateAction<string>>;
   productSelected: string; 
   setProductSelected: React.Dispatch<React.SetStateAction<string>>;
   error: boolean;
@@ -27,7 +27,7 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
   const [cartItems, setCartItems] = useState<string[]>([]);
   const [cartVisible, setCartVisible] = useState(false);
   const [productNotFound, setProductNotFound] = useState(false);
-  const [searchItem, setSarchItem] = useState("");
+  const [searchItem, setSearchItem] = useState("");
   const [productSelected, setProductSelected] = useState("");
   const [error, setError] = useState(true);
 
@@ -42,7 +42,7 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
     productNotFound,
     setProductNotFound,
     searchItem,
-    setSarchItem,
+    setSearchItem,
     productSelected,
     setProductSelected,
     error, setError

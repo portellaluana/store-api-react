@@ -4,7 +4,7 @@ import { fetchProducts } from "../../api/fetchProducts";
 import { AppContext } from "../../context/AppContext";
 
 export const Products = () => {
-  const { products, setProducts, productNotFound } = useContext(AppContext);
+  const { products, setProducts } = useContext(AppContext);
 
   useEffect(() => {
     fetchProducts().then((response) => {
@@ -14,15 +14,14 @@ export const Products = () => {
 
   return (
     <div>
-    {!productNotFound ? <div className="container-vitrine-produtos">
-    <h4>Vitrine de produtos</h4>
-    <div className="vitrine-produtos">
-        {products.map((product) => (
-          <Card key={product.id} data={{ product }} />
-        ))}
+      <div className="container-vitrine-produtos">
+        <h4>Vitrine de produtos</h4>
+        <div className="vitrine-produtos">
+          {products.map((product) => (
+            <Card key={product.id} data={{ product }} />
+          ))}
+        </div>
       </div>
-  </div> : ""
-  }
     </div>
   );
 };

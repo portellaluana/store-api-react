@@ -1,15 +1,14 @@
-import iconeSearch from "../../assets/images/icons/search-icon.png";
 import { useContext, useState } from "react";
 import { fetchProducts } from "../../api/fetchProducts";
 import { AppContext } from "../../context/AppContext";
 
 export const SearchBar = () => {
-  const { setProducts, setProductNotFound,  setSarchItem } =
+  const { setProducts, setProductNotFound, setSearchItem } =
     useContext(AppContext);
 
   const [searchValue, setSearchValue] = useState("");
 
-   const handleSearch = async (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
 
     const products = await fetchProducts(searchValue);
@@ -21,14 +20,16 @@ export const SearchBar = () => {
     const SearchResult = products.filter((product) =>
       product.title.toLocaleLowerCase().includes(searchValueLowerCase)
     );
+    sessionStorage.setItem("item-procurado", searchValue);
 
     if (SearchResult.length === 0) {
       setProductNotFound(true);
-      setSarchItem(searchValue);
+      setSearchItem(searchValue);
+
       setSearchValue("");
+      window.location.href = "/produto-não-encontrado";
     }
     setProducts(SearchResult);
-
   };
 
   return (
