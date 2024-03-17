@@ -20,6 +20,8 @@ interface ProviderValue {
   setProductSelected: React.Dispatch<React.SetStateAction<string>>;
   error: boolean;
   setError: React.Dispatch<React.SetStateAction<boolean>>;
+  menu: boolean; 
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const Provider: React.FC<ProviderProps> = ({ children }) => {
@@ -30,7 +32,7 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
   const [searchItem, setSearchItem] = useState("");
   const [productSelected, setProductSelected] = useState("");
   const [error, setError] = useState(true);
-
+  const [menu, setMenu] = useState(false);
 
   const value: ProviderValue = {
     products,
@@ -45,7 +47,8 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
     setSearchItem,
     productSelected,
     setProductSelected,
-    error, setError
+    error, setError,
+    menu, setMenu
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -28,7 +28,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ data }) => {
   }
 
   const { id, title, image, price, description, rating, quantidade } = productSelected;
-  console.log({productSelected:productSelected.quantidade})
 
   const handleAddToCart = () => {
     const itemIndex = cartItems.findIndex((product) => product.id === id);

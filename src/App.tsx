@@ -6,6 +6,10 @@ import { Provider } from "./context/Provider";
 import Details from "./pages/product-details/Details";
 import {APIError} from "./pages/APIError/APIError";
 import { PageProductNotFound } from "./pages/productNotFound/productNotFound";
+import { Eletronicos } from "./pages/categorias/Eletronicos";
+import { Joalheria } from "./pages/categorias/Joalheria";
+import { Homens } from "./pages/categorias/Homens";
+import { Mulheres } from "./pages/categorias/Mulheres";
 
 function App() {
 
@@ -19,6 +23,12 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/details" element={<Details />} />
           <Route path="/produto-não-encontrado" element={<PageProductNotFound />} />
+          <Route path="/eletronicos" element={<Eletronicos />} />
+          <Route path="/homens" element={<Homens />} />
+          <Route path="/mulheres" element={<Mulheres />} />
+          <Route path="/joalheria" element={<Joalheria />} />
+
+
         </Routes>
       </Router>
     </Provider>

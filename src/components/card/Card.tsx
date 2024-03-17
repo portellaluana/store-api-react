@@ -16,13 +16,13 @@ interface CardProps {
         count?: number;
       };
       quantidade: number;
+      category:string
     };
   };
 }
 export const Card: React.FC<CardProps> = ({ data }) => {
-  const { id, title, image, price, description } = data.product;
+  const { id, title, image, price, description, category } = data.product;
   const { cartItems, setCartItems, productSelected, setProductSelected } = useContext(AppContext);
-
   const handleAddToCart = () => {
     const item = cartItems.find((product) => product.id === id);
     
