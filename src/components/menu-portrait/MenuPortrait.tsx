@@ -26,13 +26,13 @@ export const MenuPortrait = () => {
             <li className="item-categoria-portrait" onClick={categoriaSelecionada}>eletrônicos</li>
           </Link>
           <Link to="/homens">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>homens</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>masculino</li>
           </Link>
           <Link to="/joalheria">
             <li className="item-categoria-portrait" onClick={categoriaSelecionada}>joalheria</li>
           </Link>
           <Link to="/mulheres">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>mulheres</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>feminino</li>
           </Link>
         </ul>
       </div>

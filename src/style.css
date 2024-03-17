@@ -3,13 +3,11 @@
 ::-webkit-scrollbar {
   width: 0px;
 }
-
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
 }
-
  img{
   width: 100%;
  }
@@ -17,45 +15,10 @@ p {
   margin: 0;
   padding: 0;
 }
-
 h6 {
   font-size: 1.1rem;
   margin: 0.5rem;
 }
-/*_____________ itens minicart_____________ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.list-item button {
-  display: flex;
-  justify-content: right;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-/* _____________MINICART_____________ */
-
-
-
-
-
-
-
-
 .button-primary {
   width: 100%;
   height: 50px;
@@ -66,7 +29,6 @@ h6 {
   margin-top: 0.8rem;
   font-weight: 300;
 }
-
 .button-primary-buy {
   background-color: black;
   color: white;
@@ -83,11 +45,9 @@ h6 {
   color: white;
   cursor: pointer;
 }
-
 .button-primary:active {
   background-color: #141414 !important;
 }
-
 .button-secondary {
   width: 100%;
   height: 50px;
@@ -119,7 +79,6 @@ h6 {
   background-color: white !important;
   color: black;
 }
-
 button:disabled {
   width: 100%;
   height: 50px;
@@ -131,7 +90,6 @@ button:disabled {
   font-weight: 300;
   cursor: none;
 }
-
 .button-disabled:hover,
 .button-disabled:active {
   background-color: #dbdbdb;
@@ -139,9 +97,6 @@ button:disabled {
   cursor: pointer;
 }
 
-.list-item .product-image {
-  margin: 16px 8px;
-}
 
 
 

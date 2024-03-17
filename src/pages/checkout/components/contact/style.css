@@ -9,7 +9,6 @@
 .shipping {
   padding-top: 100px;
 }
-
 .checkout-container {
   width: 100%;
   max-width: 1100px;
@@ -19,14 +18,12 @@
   grid-template-columns: 2fr 1fr;
   padding: 100px 20px 0 20px;
 }
-
 .shipping-container,
 .contact-container,
 .order-summary-container {
   display: block;
   padding-bottom: 20px;
 }
-
 .shipping-container h5,
 .contact-container h5,
 .order-summary-container h5 {
@@ -40,7 +37,6 @@
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .shipping-container input,
 .contact-container input {
   width: 100%;
@@ -52,16 +48,13 @@
   color: black;
   font-weight: 300;
 }
-
 .shipping-container input:focus-visible,
 .contact-container input:focus-visible {
   outline: 2px solid black;
 }
-
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;
 }
-
 .shipping-container input::placeholder,
 .contact-container input::placeholder {
   padding-left: 8px;
@@ -73,7 +66,6 @@ input:-webkit-autofill {
   flex-wrap: wrap;
   align-items: center;
 }
-
 .shipping-container p,
 .checkbox-content p {
   border: 1px solid #80808040;
@@ -88,13 +80,11 @@ input:-webkit-autofill {
   flex-wrap: wrap;
   align-items: center;
 }
-
 .address-number-complement,
 .address-city-neighborhood {
   display: flex;
   gap: 20px;
 }
-
 .address-number-complement .complement,
 .address-number-complement .number,
 .address-city-neighborhood .address-city,
@@ -102,12 +92,10 @@ input:-webkit-autofill {
   display: block;
   width: 100%;
 }
-
 .checkbox-content {
   display: flex;
   align-items: center;
 }
-
 .checkbox-content button {
   background-color: white;
   border: 1px solid black;
@@ -115,7 +103,6 @@ input:-webkit-autofill {
   height: 14px;
   border-radius: 50%;
 }
-
 .checkbox-content p {
   border: none;
   margin: 0;
@@ -128,12 +115,10 @@ input:-webkit-autofill {
   border-radius: 50%;
   margin-right: 8px;
 }
-
 .address-cep-button {
   display: flex;
   align-items: center;
 }
-
 .address-cep-button button {
   margin: 0 0 16px 16px;
   margin-bottom: 16px;
@@ -144,11 +129,9 @@ input:-webkit-autofill {
   text-align: left;
 color: black;
 }
-
 .order-summary-info .list-group {
   border: none;
 }
-
 .order-summary-info-price {
   display: flex;
   justify-content: space-between;
@@ -158,7 +141,6 @@ color: black;
   border-radius: 4px;
   padding: 16px;
 }
-
 .order-summary-info-price h6 {
   margin: 0;
   padding: 0;
@@ -168,11 +150,9 @@ color: black;
   width: 100%;
   gap: 20px;
 }
-
 .contact-buttons {
   margin-bottom: 60px;
 }
-
 .contact-name,
 .contact-email {
   width: 100%;
@@ -185,8 +165,7 @@ color: black;
     grid-template-columns: unset;
     padding: 0;
   }
- 
-  .order-summary-container {
+   .order-summary-container {
     margin-top: 16px;
   }
   .contact-container, .shipping-container{
@@ -199,7 +178,6 @@ color: black;
   .contact-info {
     order: 2;
   }
-
   .contact-buttons {
     margin-bottom: 20px;
   }
