@@ -13,21 +13,26 @@ export const MenuPortrait = () => {
     console.log(menu)
   };
 
+  function categoriaSelecionada(){
+    window.scrollTo(0, 0);
+    openMenu()
+  }
+
   return (
     <><div className="menu-container">
         <button onClick={openMenu} className="button-close-menu"><img src={closeIcon} alt="close-menu" /></button>
         <ul className="menu-content">
           <Link to="/eletronicos">
-            <li className="item-categoria-portrait" onClick={openMenu}>eletrônicos</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>eletrônicos</li>
           </Link>
           <Link to="/homens">
-            <li className="item-categoria-portrait" onClick={openMenu}>homens</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>homens</li>
           </Link>
           <Link to="/joalheria">
-            <li className="item-categoria-portrait" onClick={openMenu}>joalheria</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>joalheria</li>
           </Link>
           <Link to="/mulheres">
-            <li className="item-categoria-portrait" onClick={openMenu}>mulheres</li>
+            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>mulheres</li>
           </Link>
         </ul>
       </div>

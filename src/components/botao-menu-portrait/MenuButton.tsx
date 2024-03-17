@@ -3,6 +3,7 @@ import iconeMenu from "../../assets/images/icons/menu.png";
 import { AppContext } from "../../context/AppContext";
 import "../menu-portrait/style.css";
 import { MenuPortrait } from "../menu-portrait/MenuPortrait";
+import "./style.css";
 
 interface MinicartButtonProps {}
 

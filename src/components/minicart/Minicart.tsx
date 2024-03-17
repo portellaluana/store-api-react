@@ -3,6 +3,7 @@ import closeIcon from "../../assets/images/icons/close-icon.png";
 import { Link } from "react-router-dom";
 import { CartItem } from "./CartItem";
 import { AppContext } from "../../context/AppContext";
+import "./style.css";
 
 interface MinicartProps {}
 

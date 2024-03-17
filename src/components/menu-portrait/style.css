@@ -3,12 +3,17 @@
   top: 0;
   left: 0;
   background-color: white;
-
   width: 100vw;
   height: 100vh;
   z-index: 3;
 }
-
+.menu-container .button-close-menu {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
 .menu-content {
   display: inline-flex;
   flex-direction: column;
@@ -38,17 +43,6 @@ width: 50%;
 a {
   text-decoration: none;
 }
-.menu-container .button-close-menu {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 18px;
-  left: 18px;
-}
 .container-search {
   margin-top: 0.5rem;
-}
-.menu-content-portrait .icone-menu {
-  background-color: transparent;
-  border: none;
 }

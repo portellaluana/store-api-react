@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import { formatCurrrency } from "../../utils/formatCurrency";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 interface CardProps {
   data: {

@@ -3,8 +3,9 @@ import { useContext, useEffect } from "react";
 import { fetchProducts } from "../../api/fetchProducts";
 import { AppContext } from "../../context/AppContext";
 import { Navbar } from "../../components/navbar/Navbar";
-import { Slider } from "../../components/slider/Slider";
+import { Banner } from "../../components/banner/Banner";
 import { Minicart } from "../../components/minicart/Minicart";
+import mulheres from "../../assets/images/web-banner/mulheres.png";
 
 export const Mulheres = () => {
   const { products, setProducts } = useContext(AppContext);
@@ -16,16 +17,18 @@ export const Mulheres = () => {
   }, []);
 
   const items = products.filter((product) =>
-    product.category.includes("women's clothing")
+  product.category === "women's clothing"
   );
 
   return (
     <div>
       <Minicart />
       <Navbar />
-      <Slider />
+      <Banner>
+        <img className="img-banner" src={mulheres} alt="web-banner-moda-feminina" />
+      </Banner>
       <div className="container-vitrine-produtos">
-        <h4>Categoria Mulheres</h4>
+        <h4>Moda Feminina</h4>
         <div className="vitrine-produtos">
           {items.map((item) => (
             <Card key={item.id} data={{ product: item }} />

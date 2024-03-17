@@ -1,0 +1,165 @@
+.list-item {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #80808040;
+  margin-top: 8px;
+  padding-bottom: 8px;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+.list-item .product-image {
+  width: 5rem;
+}
+.list-item-info {
+  width: 100px;
+}
+.product-name {
+  height: 32px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.product-description,
+.quantity-item {
+  font-size: 0.85rem;
+  margin: 0;
+  color: grey;
+}
+.product-description {
+  height: 50px;
+  overflow: hidden;
+}
+.product-price {
+  color: black;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+.quantity-container {
+  border: 1px solid #80808040;
+  max-width: 94px;
+  border-radius: 4px;
+  padding: 8px;
+  height: 28px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.quantity-item {
+  margin: 0;
+  width: 32px;
+  text-align: center;
+}
+
+.minicart-content {
+  margin-right: 0;
+  max-width: 400px;
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: white;
+  z-index: 2;
+}
+
+.minicart-content-active {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 16px;
+  z-index: 2;
+  transition: all 400ms ease;
+}
+@media (max-width: 970px) {
+   .minicart-content-active {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+}
+
+.minicart-content ::-webkit-scrollbar {
+  background-color: white;
+  width: 8px;
+}
+
+.minicart-content ::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 50px;
+}
+.minicart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 16px 0;
+  color: black;
+  border-bottom: 1px solid #80808040;
+  margin-top: 1rem;
+}
+
+.minicart-header .close-icon {
+  width: 12px;
+  cursor: pointer;
+}
+
+.minicart-header h3 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.minicart-header button {
+  background-color: transparent;
+  border: none;
+}
+.empty-cart-content {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+.list-group {
+  border-radius: 0;
+  overflow: auto;
+  flex-grow: 1;
+  border-bottom: 1px solid #80808040;
+  padding: 0;
+  margin: 0;
+}
+
+.empty-cart {
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+}
+.minicart-footer {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.minicart-footer-div {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+.minicart-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  animation-duration: 1s;
+  transition: all 400ms ease;
+  z-index: 0;
+}

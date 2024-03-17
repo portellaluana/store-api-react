@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import iconeCarrinho from "../../assets/images/icons/cart-icon.png";
 import { AppContext } from "../../context/AppContext";
+import "./style.css";
 
 interface MinicartButtonProps {}
 

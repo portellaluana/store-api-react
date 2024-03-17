@@ -1,0 +1,29 @@
+.container-banner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 0 40px 0;
+}
+.content-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+  }
+@media (max-width: 640px) {
+  .container-banner {
+    padding: 120px 0 0 0;
+  }
+  .content-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .content-banner img {
+    width: 100%;
+  }
+}

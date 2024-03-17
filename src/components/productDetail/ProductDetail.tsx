@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import { formatCurrrency } from "../../utils/formatCurrency";
 import StarRating from "../rating/StarRating";
+import "./style.css";
 
 interface ProductDetailsProps {
   data: {

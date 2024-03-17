@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import iconeLixeira from "../../assets/images/icons/trash-icon.png";
 import { AppContext } from "../../context/AppContext";
+import "./style.css";
 
 interface CartItemProps {
   data: {

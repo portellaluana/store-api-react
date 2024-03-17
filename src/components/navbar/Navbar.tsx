@@ -10,6 +10,10 @@ import { useEffect, useState } from "react";
 export const Navbar = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 970);
 
+  function toTop(){
+    window.scrollTo(0, 0);
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 970);
@@ -27,7 +31,7 @@ export const Navbar = () => {
       {isDesktop ? (
         <section className="nav-container">
           <div className="nav-content">
-            <Link className="navbar-brand" to="/homepage">
+            <Link className="navbar-brand" onClick={toTop} to="/homepage">
               Originals
             </Link>
             <MenuDesktop />

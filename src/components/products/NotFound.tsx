@@ -1,3 +1,5 @@
+import "./style.css";
+
 export const NotFound = () => {
 
   const valorInput = sessionStorage.getItem("item-procurado");
