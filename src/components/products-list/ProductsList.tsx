@@ -4,7 +4,7 @@ import { fetchProducts } from "../../api/fetchProducts";
 import { AppContext } from "../../context/AppContext";
 import "./style.css";
 
-export const Products = () => {
+export const ProductsList = () => {
   const { products, setProducts } = useContext(AppContext);
 
   useEffect(() => {

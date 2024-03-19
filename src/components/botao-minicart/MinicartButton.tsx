@@ -10,7 +10,6 @@ export const MinicartButton: React.FC<MinicartButtonProps> = () => {
 
   const openCart = () => {
     setCartVisible(!cartVisible);
-    console.log({cartVisible: cartVisible})
   };
 
   return (

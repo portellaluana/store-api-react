@@ -10,7 +10,6 @@ export const MenuPortrait = () => {
 
   const openMenu = () => {
     setMenu(!menu);
-    console.log(menu)
   };
 
   function categoriaSelecionada(){

@@ -1,6 +1,6 @@
 import { Navbar } from "../../components/navbar/Navbar";
-import { NotFound } from "../../components/products/NotFound";
-import { Products } from "../../components/products/Products";
+import { NotFound } from "../../components/products-list/NotFound";
+import { ProductsList } from "../../components/products-list/ProductsList";
 import { Minicart } from "../../components/minicart/Minicart";
 
 export const PageProductNotFound = () => {
@@ -11,7 +11,7 @@ export const PageProductNotFound = () => {
     <div>
       <Navbar />
       <NotFound />
-      <Products />
+      <ProductsList />
       <Minicart />
       </div>
     </>

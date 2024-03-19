@@ -1,5 +1,5 @@
 import { Navbar } from "../../components/navbar/Navbar";
-import { Products } from "../../components/products/Products";
+import { ProductsList } from "../../components/products-list/ProductsList";
 import { Minicart } from "../../components/minicart/Minicart";
 import { Banner } from "../../components/banner/Banner";
 import homepage from "../../assets/images/web-banner/homepage.png";
@@ -11,7 +11,7 @@ export const Homepage = () => {
       <Banner>
         <img className="img-banner" src={homepage} alt="web-banner" />
       </Banner>
-      <Products />
+      <ProductsList />
       <Minicart />
     </>
   );

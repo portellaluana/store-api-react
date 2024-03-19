@@ -60,7 +60,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ data }) => {
           <StarRating rating={rating} /> 
           <h1>{title}</h1>
           <p className="details-description">{description}</p>
-          <strong className="price">R$ {formatCurrrency(price, 'BRL')}</strong>
+          <strong className="price">{formatCurrrency(price, 'BRL')}</strong>
           <button className="button-primary" onClick={handleAddToCart}>Adicionar ao carrinho</button>
         </div>
       </div>
