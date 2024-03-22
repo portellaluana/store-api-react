@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fetchCep } from "../../../../api/fetchProducts";
+import { UseCep } from "../../../../hook/UseCep";
 
 export const Shipping = () => {
   const [address, setAddress] = useState({});
@@ -11,7 +11,7 @@ export const Shipping = () => {
       return null
     }
 
-    fetchCep(cep).then((CEP) => {
+    UseCep(cep).then((CEP) => {
       setAddress(CEP);
     }).catch((error) => {
       console.error(error);

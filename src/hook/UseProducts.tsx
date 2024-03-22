@@ -1,4 +1,4 @@
-export const fetchProducts = async () => {
+export const UseProducts = async () => {
   try {
     const response = await fetch('https://fakestoreapi.com/products');
     
@@ -18,22 +18,4 @@ export const fetchProducts = async () => {
     window.location.href = '/erro';
     return error;
   }
-};
-
-
-
-
-export const fetchCep = async (cep: number) => {
-
-  try {
-    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-
-  const CEP = await response.json();
-  
-  return CEP;
-
-  } catch (error) {
-  return {}
-  }
-
 };

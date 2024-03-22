@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import closeIcon from "../../assets/images/icons/close-icon.png";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import "./style.css";
+import { UseCategories } from "../../hook/UseCategories";
 
 export const MenuPortrait = () => {
-  const { menu, setMenu } = useContext(AppContext);
+  const { menu, setMenu, categorias, setCategorias  } = useContext(AppContext);
+  const navigate = useNavigate();
 
   const openMenu = () => {
     setMenu(!menu);
@@ -17,22 +19,28 @@ export const MenuPortrait = () => {
     openMenu()
   }
 
+  useEffect(() => {
+    UseCategories().then((response) => {
+      setCategorias(response);
+    });
+  }, []);
+
+  const handleClick = (categoria) => {
+    navigate(`/categoria/${categoria}`);
+    categoriaSelecionada()
+  };
+
   return (
     <><div className="menu-container">
         <button onClick={openMenu} className="button-close-menu"><img src={closeIcon} alt="close-menu" /></button>
         <ul className="menu-content">
-          <Link to="/eletronicos">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>eletrônicos</li>
-          </Link>
-          <Link to="/homens">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>masculino</li>
-          </Link>
-          <Link to="/joalheria">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>joalheria</li>
-          </Link>
-          <Link to="/mulheres">
-            <li className="item-categoria-portrait" onClick={categoriaSelecionada}>feminino</li>
-          </Link>
+               {categorias.map((categoria, index) => (
+          <li className="item-categoria-portrait" key={index} onClick={() => handleClick(categoria)}>
+            <Link to={`/categoria/${categoria}`} className="link-categoria">
+              {categoria}
+            </Link>
+          </li>
+        ))}
         </ul>
       </div>
       

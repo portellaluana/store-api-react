@@ -8,6 +8,8 @@ interface ProviderProps {
 interface ProviderValue {
   products: string[]; 
   setProducts: React.Dispatch<React.SetStateAction<string[]>>;
+  categorias: string[]; 
+  setCategorias: React.Dispatch<React.SetStateAction<string[]>>;
   cartItems: string[]; 
   setCartItems: React.Dispatch<React.SetStateAction<string[]>>;
   cartVisible: boolean;
@@ -26,6 +28,7 @@ interface ProviderValue {
 
 export const Provider: React.FC<ProviderProps> = ({ children }) => {
   const [products, setProducts] = useState<string[]>([]); 
+  const [categorias, setCategorias] = useState<string[]>([]); 
   const [cartItems, setCartItems] = useState<string[]>([]);
   const [cartVisible, setCartVisible] = useState(false);
   const [productNotFound, setProductNotFound] = useState(false);
@@ -37,6 +40,7 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
   const value: ProviderValue = {
     products,
     setProducts,
+    categorias, setCategorias,
     cartItems,
     setCartItems,
     cartVisible,

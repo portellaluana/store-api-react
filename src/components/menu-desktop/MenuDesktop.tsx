@@ -1,26 +1,35 @@
-import { Link } from "react-router-dom";
 import "./style.css";
-
-function categoriaSelecionada(){
-  window.scrollTo(0, 0);
-}
+import { UseCategories } from "../../hook/UseCategories";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../../context/AppContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export const MenuDesktop = () => {
+  const { categorias, setCategorias } = useContext(AppContext);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    UseCategories().then((response) => {
+      setCategorias(response);
+    });
+  }, []);
+
+  const handleClick = (categoria) => {
+    navigate(`/categoria/${categoria}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="categoria-container">
       <ul className="categoria-content">
-        <Link to='/eletronicos'>
-        <li className="item-categoria" onClick={categoriaSelecionada}>eletrônicos</li>
-        </Link>
-      <Link to='/homens'>
-        <li className="item-categoria" onClick={categoriaSelecionada}>Masculino</li>
-        </Link>
-        <Link to='/joalheria'>
-        <li className="item-categoria" onClick={categoriaSelecionada}>joalheria</li>
-        </Link>
-        <Link to='/mulheres'>
-        <li className="item-categoria" onClick={categoriaSelecionada}>feminino</li>
-        </Link>
+        {categorias.map((categoria, index) => (
+          <li className="item-categoria" key={index} onClick={() => handleClick(categoria)}>
+            <Link to={`/categoria/${categoria}`} className="link-categoria">
+              {categoria}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

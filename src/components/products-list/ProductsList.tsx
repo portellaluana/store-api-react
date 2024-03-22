@@ -1,6 +1,6 @@
 import { Card } from "../card/Card";
 import { useContext, useEffect } from "react";
-import { fetchProducts } from "../../api/fetchProducts";
+import { UseProducts } from "../../hook/UseProducts";
 import { AppContext } from "../../context/AppContext";
 import "./style.css";
 
@@ -8,7 +8,7 @@ export const ProductsList = () => {
   const { products, setProducts } = useContext(AppContext);
 
   useEffect(() => {
-    fetchProducts().then((response) => {
+    UseProducts().then((response) => {
       setProducts(response);
     });
   }, []);

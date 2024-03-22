@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { fetchProducts } from "../../api/fetchProducts";
+import { UseProducts } from "../../hook/UseProducts";
 import { AppContext } from "../../context/AppContext";
 
 export const SearchBar = () => {
@@ -11,7 +11,7 @@ export const SearchBar = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
 
-    const products = await fetchProducts(searchValue);
+    const products = await UseProducts(searchValue);
     setProducts(products);
     setSearchValue("");
 

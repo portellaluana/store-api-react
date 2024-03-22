@@ -4,7 +4,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { Card } from "../../components/card/Card";
 import { Minicart } from "../../components/minicart/Minicart";
 import { ProductDetails } from "../../components/productDetail/ProductDetail";
-import { fetchProducts } from "../../api/fetchProducts";
+import { UseProducts } from "../../hook/UseProducts";
 
 const Details = () => {
   const { productSelected, products, setProductSelected, setProducts } = useContext(AppContext);
@@ -16,7 +16,7 @@ const Details = () => {
     if (storedProductSelected) {
       setProductSelected(storedProductSelected);
     }
-    fetchProducts().then((response) => {
+    UseProducts().then((response) => {
       setProducts(response);
     });
   }, [setProductSelected]);
